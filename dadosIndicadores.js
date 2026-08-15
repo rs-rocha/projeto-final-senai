@@ -1,4 +1,22 @@
-var urlIndicadores = "https://servicodados.ibge.gov.br/api/v1/paises/{paises}/indicadores/{indicadores}"
+var urlIndicadores = "https://servicodados.ibge.gov.br/api/v1/paises/{paises}/indicadores/778" + "";
+"18 a 27"
+"29 a 36"
+"38 a 42"
+"44 a 52"
+"54 a 55"
+"57"
+//meus indicadores: 
+19 - educacao
+20 - saude
+21 - pesquisa_e_desenvolvimento
+23 - pib_per_capita
+27 - total_pib
+29 - consumo_calorico
+30 - esperanca_vida_nascer
+34 - incidencia_subnutricao
+49 - populacao
+50 - taxa_mortalidade
+51 - taxa_natalidade
 
 /*
 INDICADORES:
