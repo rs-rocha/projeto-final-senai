@@ -17,18 +17,7 @@ meuBD: {
 
 function buscarPais(){
 
-    //let chave = "ae81a959";
-
     let pais = document.getElementById("pais").value;
-    //let ano = document.getElementById("ano").value;
-
-    /*
-    if (titulo == "") {
-
-        alert("Digite o nome de um filme.");
-        return;
-    }
-    */
     
     fetch(`https://servicodados.ibge.gov.br/api/v1/paises/${pais}`)
         .then(function(resposta){
@@ -48,8 +37,100 @@ function buscarPais(){
             console.log("Area Total: ", dados[0].area.total); 
             console.log("Localização: ", dados[0].localizacao["regiao-intermediaria"].nome);
             console.log("Lingua: ", dados[0].linguas[0].nome);            
-            console.log("historico: ", dados[0].historico);
+            //console.log("historico: ", dados[0].historico);
+    });
+    
+    //educação 19
+    fetch(`https://servicodados.ibge.gov.br/api/v1/paises/${pais}/indicadores/77819`)
+        .then(function(resposta){
+            return resposta.json();            
+        })
+        .then(function(dados){
+            if(dados.error){
+                alert("Indicador Educação não encontrado");
+                return;
+            }
+            console
+            //Acesso aos dados do indicador educacao
+            console.log("Investimento em Educação: ",dados[0].series[0].serie)
+ 
+    });
+    //saude 20
+    fetch(`https://servicodados.ibge.gov.br/api/v1/paises/${pais}/indicadores/77820`)
+        .then(function(resposta){
+            return resposta.json();            
+        })
+        .then(function(dados){
+            if(dados.error){
+                alert("Indicador Saude não encontrado");
+                return;
+            }
+            console
+            //Acesso aos dados do indicador saude
+            console.log("Investimento em Saúde: ", dados[0].series[0].serie)
+ 
+    });
+    //pesquisa e desenvolvimento 21
+    fetch(`https://servicodados.ibge.gov.br/api/v1/paises/${pais}/indicadores/77821`)
+        .then(function(resposta){
+            return resposta.json();            
+        })
+        .then(function(dados){
+            if(dados.error){
+                alert("Indicador Pesquisa e Desenvolvimento não encontrado");
+                return;
+            }
+            console
+            //Acesso aos dados do indicador Pesquisa e Desenvolvimento
+            console.log("Investimento em Pesquisa e desenvolvimento", dados[0].series[0].serie)
+ 
+    });
+    //populacao 49
+    fetch(`https://servicodados.ibge.gov.br/api/v1/paises/${pais}/indicadores/77849`)
+        .then(function(resposta){
+            return resposta.json();            
+        })
+        .then(function(dados){
+            if(dados.error){
+                alert("Indicador população não encontrado");
+                return;
+            }
+            console
+            //Acesso aos dados do indicador população
+            console.log("População: ", dados[0].series[0].serie)
+ 
     });
 
+    //total pib 27
+    fetch(`https://servicodados.ibge.gov.br/api/v1/paises/${pais}/indicadores/77827`)
+        .then(function(resposta){
+            return resposta.json();            
+        })
+        .then(function(dados){
+            if(dados.error){
+                alert("Indicador Pib Total não encontrado");
+                return;
+            }
+            console
+            //Acesso aos dados do indicador Pib Total
+            console.log("Pib Total: ", dados[0].series[0].serie)
+ 
+    });
 
+    //pib per capita 23
+    fetch(`https://servicodados.ibge.gov.br/api/v1/paises/${pais}/indicadores/77823`)
+        .then(function(resposta){
+            return resposta.json();            
+        })
+        .then(function(dados){
+            if(dados.error){
+                alert("Indicador Educação não encontrado");
+                return;
+            }
+            console
+            //Acesso aos dados do indicador pib per capita
+            console.log("Pib Per Capita", dados[0].series[0].serie)
+ 
+    });
+    
 }
