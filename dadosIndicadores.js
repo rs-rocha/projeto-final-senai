@@ -6,15 +6,15 @@ var urlIndicadores = "https://servicodados.ibge.gov.br/api/v1/paises/{paises}/in
 "54 a 55"
 "57"
 //meus indicadores: 
-19 - educacao
-20 - saude
-21 - pesquisa_e_desenvolvimento
-23 - pib_per_capita
-27 - total_pib
+x19 - educacao
+x20 - saude
+x21 - pesquisa_e_desenvolvimento
+x23 - pib_per_capita
+x27 - total_pib
 29 - consumo_calorico
 30 - esperanca_vida_nascer
 34 - incidencia_subnutricao
-49 - populacao
+x49 - populacao
 50 - taxa_mortalidade
 51 - taxa_natalidade
 
