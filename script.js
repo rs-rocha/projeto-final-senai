@@ -15,7 +15,7 @@ function buscarEducacao(pais){
             }
             console
             //Acesso aos dados do indicador educacao
-            console.log("Investimento em Educação: ",dados[0].series[0].serie); 
+            console.log("Investimento em Educação: ", TratarErro(dados[0].series)); 
     });
 }
 
@@ -32,7 +32,7 @@ function buscarSaude(pais){
             }
             console
             //Acesso aos dados do indicador saude
-            console.log("Investimento em Saúde: ", dados[0].series[0].serie); 
+            console.log("Investimento em Saúde: ", TratarErro(dados[0].series)); 
     });
 }
 
@@ -49,7 +49,7 @@ function buscarPesquisaDesenvolvimento(pais){
             }
             console
             //Acesso aos dados do indicador Pesquisa e Desenvolvimento
-            console.log("Investimento em Pesquisa e desenvolvimento", dados[0].series[0].serie); 
+            console.log("Investimento em Pesquisa e desenvolvimento: ", TratarErro(dados[0].series)); 
     });
 }
 
@@ -66,7 +66,7 @@ function buscarPopulacao(pais){
             }
             console
             //Acesso aos dados do indicador população
-            console.log("População: ", dados[0].series[0].serie); 
+            console.log("População: ", TratarErro(dados[0].series)); 
     });
 
 }
@@ -84,7 +84,7 @@ function buscarTotalPib(pais){
             }
             console
             //Acesso aos dados do indicador Pib Total
-            console.log("Pib Total: ", dados[0].series[0].serie); 
+            console.log("Pib Total: ", TratarErro(dados[0].series)); 
     });
 }
 
@@ -101,7 +101,7 @@ function buscarPibPerCapta(pais){
             }
             console
             //Acesso aos dados do indicador pib per capita
-            console.log("Pib Per Capita", dados[0].series[0].serie); 
+            console.log("Pib Per Capita: ", TratarErro(dados[0].series)); 
     });
 }
 
