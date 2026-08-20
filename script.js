@@ -14,10 +14,17 @@ meuBD: {
     historico:"blabla"
 }
 */
+    
+function limpar(){
+    document.getElementById("pais").value = "";
+}
 
 function buscarPais(){
-
     let pais = document.getElementById("pais").value;
+
+    console.log(pais);
+    pais = pais.slice(0,2);
+    console.log(pais);
     
     fetch(`https://servicodados.ibge.gov.br/api/v1/paises/${pais}`)
         .then(function(resposta){
@@ -35,7 +42,7 @@ function buscarPais(){
             console.log("Capital: ", dados[0].governo.capital.nome);
             console.log("Lingua: ", dados[0].linguas[0].nome);
             console.log("Area Total: ", dados[0].area.total); 
-            console.log("Localização: ", dados[0].localizacao["regiao-intermediaria"].nome);
+            console.log("Localização: ", dados[0].localizacao["sub-regiao"].nome);
             console.log("Lingua: ", dados[0].linguas[0].nome);            
             //console.log("historico: ", dados[0].historico);
     });
