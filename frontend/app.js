@@ -25,14 +25,17 @@ async function fazerGET() {
 async function fazerPOST() {
     // Monta o objeto com os dados digitados
     const usuarioNovo = {
-        nome: document.getElementById("inputNome").value,
-        idade: document.getElementById("inputIdade").value,
-        registroAluno: document.getElementById("inputRegistroAluno").value,
-        emailInstitucional: document.getElementById("inputEmailInstitucional").value,
-        turma: document.getElementById("inputTurma").value,
+        pais: document.getElementById("nomePais").value,
+        capital: document.getElementById("capital").value,
+        lingua: document.getElementById("lingua").value,
+        areaTotal: document.getElementById("area").value,
+        localizacao: document.getElementById("localizacao").value,
+        historico: document.getElementById("historico").value
+        /*
         periodo: document.getElementById("inputPeriodo").value,
         apresentacao: document.getElementById("inputApresentacao").value
-        
+        */
+
     };
 
     const resposta = await fetch(URL_API, {
@@ -43,6 +46,7 @@ async function fazerPOST() {
 
     const dados = await resposta.json();
     mostrarNaTela(dados);
+    alert("Inserido no BD com sucesso!")
 }
 
 
@@ -53,13 +57,12 @@ async function fazerPUT() {
     const id = document.getElementById("inputId").value;
     
     const usuarioAtualizado = {
-        nome: document.getElementById("inputNome").value,
-        idade: document.getElementById("inputIdade").value,
-        registroAluno: document.getElementById("inputRegistroAluno").value,
-        emailInstitucional: document.getElementById("inputEmailInstitucional").value,
-        turma: document.getElementById("inputTurma").value,
-        periodo: document.getElementById("inputPeriodo").value,
-        apresentacao: document.getElementById("inputApresentacao").value
+        pais: document.getElementById("nomePais").value,
+        capital: document.getElementById("capital").value,
+        lingua: document.getElementById("lingua").value,
+        areaTotal: document.getElementById("area").value,
+        localizacao: document.getElementById("localizacao").value,
+        historico: document.getElementById("historico").value
     };
 
     // Repare na URL: passamos o ID no final (ex: http://localhost:8080/usuarios/5)
