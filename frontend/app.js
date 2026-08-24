@@ -2,7 +2,7 @@ const URL_API = "http://localhost:8080/paises";
 
 // Função de apoio para imprimir o resultado na tela
 function mostrarNaTela(dados) {
-    const tela = document.getElementById("telaResposta");
+    tela = document.getElementById("telaResposta");
     // Transforma o objeto JavaScript de volta em texto formatado para exibir na tela
     tela.innerText = JSON.stringify(dados, null, 4);
 }
@@ -25,12 +25,12 @@ async function fazerGET() {
 async function fazerPOST() {
     // Monta o objeto com os dados digitados
     const usuarioNovo = {
-        pais: document.getElementById("nomePais").value,
-        capital: document.getElementById("capital").value,
-        lingua: document.getElementById("lingua").value,
-        areaTotal: document.getElementById("area").value,
-        localizacao: document.getElementById("localizacao").value,
-        historico: document.getElementById("historico").value
+        pais: document.getElementById("nomePais").innerText,
+        capital: document.getElementById("capital").innerText,
+        lingua: document.getElementById("lingua").innerText,
+        areaTotal: document.getElementById("area").innerText,
+        localizacao: document.getElementById("localizacao").innerText,
+        historico: document.getElementById("historico").innerText
         /*
         periodo: document.getElementById("inputPeriodo").value,
         apresentacao: document.getElementById("inputApresentacao").value
@@ -45,7 +45,7 @@ async function fazerPOST() {
     });
 
     const dados = await resposta.json();
-    mostrarNaTela(dados);
+    //mostrarNaTela(dados);
     alert("Inserido no BD com sucesso!")
 }
 

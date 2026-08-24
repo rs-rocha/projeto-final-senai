@@ -194,6 +194,7 @@ function buscarPais(pais){
 }
 
 function limparDados(){
+    tela.innerHTML = "";
     document.getElementById("vazio").innerHTML = "";
     document.getElementById("nomePais").innerHTML = "";
     document.getElementById("capital").innerHTML = "";
